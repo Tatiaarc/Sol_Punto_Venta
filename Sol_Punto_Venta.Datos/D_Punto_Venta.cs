@@ -79,13 +79,13 @@ namespace Sol_Punto_Venta.Datos
             }
             catch (Exception ex)
             {
-
                 Rpta = ex.Message;
             }
             finally
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            return Rpta;
         }
     }
 }
